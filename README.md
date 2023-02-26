@@ -17,5 +17,5 @@ mvn clean package
 
 Copy the war file from target/name_of_war.war  to tomcat_installed_directory/webapps directory
 
-Go to url ————>.    http://public_ip_of_server:8080/maven-web-application
+Go to url ————>.    http://public_ip_of_server:8080/maven-web-application.
 
