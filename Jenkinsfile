@@ -3,7 +3,7 @@ pipeline {
 
     tools {
         // Install the Maven version configured as "M3" and add it to the path.
-        maven "maven"
+        Maven "maven 3.6.3"
     }
     
 
@@ -48,10 +48,11 @@ pipeline {
         
         stage('Docker Build'){
             steps{
-                sh "docker login -u nayakomprasad -p dckr_pat_-euNNcMJJlM2drsnxHwBo1loAOw"
-                sh "docker build -t webapp ."
-                sh "docker tag webapp:latest nayakomprasad/maven-webapp:1.0"
-                sh "docker push nayakomprasad/maven-webapp:1.0"
+                sh '''
+                   docker build -t web-demo .
+                   docker tag web-demo:latest jadhavshubham/webapp-zeilotech:v6
+                   docker push adhavshubham/webapp-zeilotech:v6
+                '''
             }
         }
       
