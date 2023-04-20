@@ -52,7 +52,7 @@ pipeline {
                    docker build -t web-demo .
                    docker tag web-demo:latest jadhavshubham/webapp-zeilotech:v6
                    docker login -u jadhavshubham -p dckr_pat_nr4B-BuaiUCnyHfrJL6sBLM_Qsg
-                   docker push adhavshubham/webapp-zeilotech:v6
+                   docker push jadhavshubham/webapp-zeilotech:v6
                 '''
             }
         }
